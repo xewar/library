@@ -1,4 +1,3 @@
-//next steps - a button to select and delete books in the library
 
 function Book(title, author, pages, read) {
     this.title = title,
@@ -8,7 +7,6 @@ function Book(title, author, pages, read) {
 }
 
 let myLibrary = [];
-
 function addBookToLibrary(book){
         myLibrary.push(book)
 }
@@ -24,8 +22,9 @@ for (book of books) {
 }
 let cards = document.querySelector('#cards')
 
-function displayBooks(){
-    //delete any previous children
+//CREATE CARDS TO DISPLAY EACH BOOK
+function displayBooks(){ 
+    //delete any previous cards - this function creates the cards again each time you modify the library
     while (cards.firstChild){
         cards.removeChild(cards.firstChild);
     }
@@ -73,6 +72,8 @@ newBookButton.addEventListener('click',newBookForm);
 let addNew = document.querySelector('.bookForm');
 let elements = ['title','author','pages','read']
 let form = document.createElement('form');
+let newBookColumn = document.querySelector('.new')
+
 
 ////creates the form to input a new book
 function newBookForm (){ 
@@ -99,7 +100,7 @@ function newBookForm (){
     let submit = document.createElement('button')
     submit.textContent = 'Add book'
     submit.setAttribute('class','submitButton')
-    addNew.appendChild(submit)
+    newBookColumn.appendChild(submit)
     submit.addEventListener('click',addNewBook)
 }
 
@@ -121,6 +122,9 @@ function addNewBook(){
     while (form.firstChild){
         form.removeChild(form.firstChild);
     }
+    let submitButton = document.querySelector('.submitButton')
+    newBookColumn.removeChild(submitButton)
+
 }
 
 //DELETING BOOKS FROM LIBRARY
@@ -131,7 +135,6 @@ function deleteBook(){
    let newLibrary = myLibrary.filter(book => book['title'] != deletedCardTitle);
    myLibrary = newLibrary;
    displayBooks(myLibrary);
-   console.log(deletedCardTitle)
 }
 
 //CHANGING READ STATUS
