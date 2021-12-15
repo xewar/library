@@ -1,7 +1,10 @@
-**Things that I practiced with this project:**
-+ Using forms - creating them and working with user input
-+ Passing an array into a function as its parameters using spread syntax
+**Initial Requirements**
++ Ability to add and delete books from a library
++ Ability to change the *read* status of a book
+
+**Project Focus**
 + Prototypal inheritance / new object creation
++ Creating forms and working with user input
 
 **Other thoughts:**
 + I had some issues with the formatting in this project. For example, I would like the box around the books to grow as the page changes size, but for the book cards to stay left aligned within that box.
