@@ -29,9 +29,10 @@ function displayBooks(){
         cards.removeChild(cards.firstChild);
     }
 
-    for (let book of myLibrary) {
+    for (let [index,book] of myLibrary.entries()) {
         let card = document.createElement('div');
         card.classList.add('card');
+        card.setAttribute('id',index)
         //adding author + title to each card
         let div2 = document.createElement('div')
         div2.classList.add('bottom')
@@ -103,10 +104,9 @@ function newBookForm (){
     newBookColumn.appendChild(submit)
     submit.addEventListener('click',addNewBook)
 }
-
-
- // clicking submit adds a new card for each new book, then clears the form
+//SUBMITTING THE RESULTS OF THE FROM
 function addNewBook(){
+    // clicking submit adds a new card for each new book, then clears the form
     let newBookArray = []
     for (element of elements) {
         newBookArray.push(document.getElementById(element).value)
@@ -124,18 +124,20 @@ function addNewBook(){
     }
     let submitButton = document.querySelector('.submitButton')
     newBookColumn.removeChild(submitButton)
-
 }
 
 //DELETING BOOKS FROM LIBRARY
 let deleteButtons = document.querySelectorAll('.exitButton');
 deleteButtons.forEach(btn => btn.addEventListener('click',deleteBook));
+
 function deleteBook(){
-   let deletedCardTitle = this.parentElement.parentElement.firstChild.firstChild.textContent;
-   let newLibrary = myLibrary.filter(book => book['title'] != deletedCardTitle);
-   myLibrary = newLibrary;
-   displayBooks(myLibrary);
-}
+    let idToDelete = this.parentElement.parentElement.id;
+    myLibrary.splice(idToDelete,1)
+    displayBooks(myLibrary);
+    let deleteButtons = document.querySelectorAll('.exitButton');
+     deleteButtons.forEach(btn => btn.addEventListener('click',deleteBook));
+ }
+ 
 
 //CHANGING READ STATUS
 let bookCards = document.querySelectorAll('.card')
