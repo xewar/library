@@ -6,7 +6,7 @@
 + Prototypal inheritance / new object creation
 + Creating forms and working with user input
 
-**Other thoughts:**
+**Issues that came up**
 + I had some issues with the formatting in this project. For example, I would like the box around the books to grow as the page changes size, but for the book cards to stay left aligned within that box.
 + I also delete and re-create all the cards when I add or remove a single card (by calling the 'displaybooks' function). I added an index number as an ID for each card in the DOM that corresponds to its index in the book library('myLibrary'). A future update could target the IDs in the library and then update the IDs of the cards in the DOM, rather than re-creating the cards each time. 
 
