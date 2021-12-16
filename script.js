@@ -64,6 +64,10 @@ function displayBooks(){
         card.appendChild(div1)
         cards.appendChild(card)
     }
+    let deleteButtons = document.querySelectorAll('.exitButton');
+    deleteButtons.forEach(btn => btn.addEventListener('click',deleteBook));
+    let bookCards = document.querySelectorAll('.card')
+    bookCards.forEach(card => card.addEventListener('click',changeReadStatus))
 }
 displayBooks(myLibrary);
 
@@ -75,12 +79,10 @@ let elements = ['title','author','pages','read']
 let form = document.createElement('form');
 let newBookColumn = document.querySelector('.new')
 
-
 ////creates the form to input a new book
 function newBookForm (){ 
     form.setAttribute("method", "post");
     form.setAttribute("action", "submit.php");
-
     //each element is an input in the form
     for (element of elements){
         let div = document.createElement('div')
@@ -134,14 +136,11 @@ function deleteBook(){
     let idToDelete = this.parentElement.parentElement.id;
     myLibrary.splice(idToDelete,1)
     displayBooks(myLibrary);
-    let deleteButtons = document.querySelectorAll('.exitButton');
-     deleteButtons.forEach(btn => btn.addEventListener('click',deleteBook));
  }
  
 
 //CHANGING READ STATUS
-let bookCards = document.querySelectorAll('.card')
-bookCards.forEach(card => card.addEventListener('click',changeReadStatus))
+
 function changeReadStatus(){ //toggles between the three statuses (no, yes, currently reading)
     if (this.classList.contains('no')){
         this.classList.replace('no','currently_reading')
