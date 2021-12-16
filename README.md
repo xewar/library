@@ -1,3 +1,5 @@
+This project was the first project in the Odin Project's full stack Javascript. You can view the live project [here](https://xewar.github.io/library/).
+
 **Initial Requirements**
 + Ability to add and delete books from a library
 + Ability to change the *read* status of a book
