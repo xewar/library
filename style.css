@@ -1,11 +1,20 @@
+@font-face {
+    font-family: 'aleo';
+    src: url('./aleo-fontfacekit/web\ fonts/aleo_regular_macroman/Aleo-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
     display: flex;
     margin: 0px;
     margin-left: 20px;
-    font-family: Helvetica, sans-serif;
+    font-family: 'aleo';
+
     flex-direction: column;
 }
 h1{
+    font-family: 'aleo';
     color:  rgba(42, 75, 104, 0.4);
     margin-bottom: 10px;
 }
@@ -133,7 +142,7 @@ form{
     flex-direction: column;
     /* flex: 1; */
     gap: 10px;
-    font-family: Helvetica, sans-serif;
+    font-family: 'aleo';
     color: rgba(61, 85, 136, 80%);
     margin-bottom: 10px;
 }
@@ -152,7 +161,7 @@ input{
 }
 button{
     display: flex;
-    font-family: Helvetica, sans-serif;
+    font-family: 'aleo';
     justify-content: center;
     border:none;
     color: rgba(61, 85, 136,90%);
