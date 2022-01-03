@@ -1,29 +1,31 @@
-@font-face {
-    font-family: 'aleo';
-    src: url('./aleo-fontfacekit/web\ fonts/aleo_regular_macroman/Aleo-Regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body{
     display: flex;
     margin: 0px;
     margin-left: 20px;
-    font-family: 'aleo';
-
+    font-family: Helvetica, sans-serif;
     flex-direction: column;
 }
-h1{
-    font-family: 'aleo';
-    color:  rgba(42, 75, 104, 0.4);
+.header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-bottom: 10px;
+    margin-left: 30px;
+
+}
+/* .icon{
+    filter: invert(22%) sepia(76%) saturate(410%) hue-rotate(166deg) brightness(93%) contrast(87%);
+} */
+
+h1{
+    font-family: Helvetica, sans-serif;
+    color:  rgba(42, 75, 104, 0.4);
+    margin: 10px 0;
 }
 .instructions{
     color:  rgba(42, 75, 104, 0.6);
-    margin-left: 30px;
     font-size: smaller;
     font-style: italic;
-    margin-bottom: 15px;
 }
 
 #container{
@@ -97,16 +99,14 @@ h1{
 }
 #key{
     display: flex;
-    flex:1;
+    font-family: Helvetica, sans-serif;
     color: rgba(61, 85, 136, 80%);
-    font-size: small;
     gap: 10px;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    margin-left: 30px;
+    flex-wrap: nowrap;
+    vertical-align: center;
     margin-top: 10px;
     margin-bottom: 15px;
+    padding: 10px 0;
 }
 
 .yes, .legend1{
@@ -114,16 +114,17 @@ h1{
 }
 .no, .legend2{
     background-color:white;
-    z-index: 6;
 }
 .currently_reading, .legend3{
     background-color: rgba(127, 121, 134,35%);
 }
 
 .legend1, .legend2, .legend3 {
-    padding: 10px;
-    align-self:center;
-    width: 100px;
+    padding: 10px ;
+    text-align: center;
+    min-width: 120px;
+    width: auto;
+    height: 20px;
 }
 .legend2{
     padding: 8px;
@@ -135,7 +136,6 @@ h1{
     flex: 1;
     flex-direction: column;
     margin-right:  30px;
-    /* margin-left: 60px; */
 }
 form{
     display:flex;
@@ -161,7 +161,7 @@ input{
 }
 button{
     display: flex;
-    font-family: 'aleo';
+    font-family: Helvetica, sans-serif;
     justify-content: center;
     border:none;
     color: rgba(61, 85, 136,90%);
