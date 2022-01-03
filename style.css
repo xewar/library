@@ -140,8 +140,6 @@ h1{
 form{
     display:flex;
     flex-direction: column;
-    /* flex: 1; */
-    gap: 10px;
     font-family: 'aleo';
     color: rgba(61, 85, 136, 80%);
     margin-bottom: 10px;
@@ -153,6 +151,8 @@ form{
     gap: 5px;
     margin-top: 10px;
     text-transform: capitalize;
+    font-family: Helvetica, sans-serif;
+
 
 }
 input{

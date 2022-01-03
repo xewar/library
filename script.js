@@ -1,9 +1,10 @@
-
-function Book(title, author, pages, read) {
-    this.title = title,
-    this.author = author,
-    this.pages = pages,
-    this.read = read
+class Book  {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
 
 let myLibrary = [];
@@ -106,7 +107,7 @@ function newBookForm (){
     newBookColumn.appendChild(submit)
     submit.addEventListener('click',addNewBook)
 }
-//SUBMITTING THE RESULTS OF THE FROM
+//SUBMITTING THE RESULTS OF THE FORM
 function addNewBook(){
     // clicking submit adds a new card for each new book, then clears the form
     let newBookArray = []
@@ -140,7 +141,6 @@ function deleteBook(){
  
 
 //CHANGING READ STATUS
-
 function changeReadStatus(){ //toggles between the three statuses (no, yes, currently reading)
     if (this.classList.contains('no')){
         this.classList.replace('no','currently_reading')
