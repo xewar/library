@@ -1,3 +1,6 @@
+
+<img src="https://github.com/xewar/projectThumbnails/blob/9608b7b56623d29296f85be71775f31e1ff10d9d/library.png">
+
 This project was the first project in the Odin Project's full stack Javascript. You can view the live project [here](https://xewar.github.io/library/).
 
 **Initial Requirements**
